@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Thirdparty">
+      <UniqueIdentifier>{7e933300-8722-4edc-bb36-ff31949054ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thirdparty\safetyhook">
+      <UniqueIdentifier>{e66b0983-9cfd-4cd7-9747-185fb9cb3065}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thirdparty\valve">
+      <UniqueIdentifier>{ca37ff29-375c-42a3-b780-53ee9ad9060f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thirdparty\valve\tier0">
+      <UniqueIdentifier>{22c34c84-542a-4fa4-b157-2466ca2c91a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thirdparty\valve\tier1">
+      <UniqueIdentifier>{608bda6d-22a0-4361-aee8-d9319b67e0dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thirdparty\valve\vstdlib">
+      <UniqueIdentifier>{6e3740a8-15cb-4565-ba0b-2c04809914f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thirdparty\valve\minbase">
+      <UniqueIdentifier>{e362cd2e-6527-41e5-9431-f1344c6f6265}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hooks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="safetyhook\safetyhook.cpp">
+      <Filter>Thirdparty\safetyhook</Filter>
+    </ClCompile>
+    <ClCompile Include="safetyhook\Zydis.c">
+      <Filter>Thirdparty\safetyhook</Filter>
+    </ClCompile>
+    <ClCompile Include="valve\vstdlib\strtools.cpp">
+      <Filter>Thirdparty\valve\vstdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="valve\tier1\ipv6text.c">
+      <Filter>Thirdparty\valve\tier1</Filter>
+    </ClCompile>
+    <ClCompile Include="valve\tier1\utlbuffer.cpp">
+      <Filter>Thirdparty\valve\tier1</Filter>
+    </ClCompile>
+    <ClCompile Include="valve\tier0\valve_tracelogging.cpp">
+      <Filter>Thirdparty\valve\tier0</Filter>
+    </ClCompile>
+    <ClCompile Include="valve\tier0\dbg.cpp">
+      <Filter>Thirdparty\valve\tier0</Filter>
+    </ClCompile>
+    <ClCompile Include="valve\tier0\platformtime.cpp">
+      <Filter>Thirdparty\valve\tier0</Filter>
+    </ClCompile>
+    <ClCompile Include="valve\tier1\keyvalues.cpp">
+      <Filter>Thirdparty\valve\tier1</Filter>
+    </ClCompile>
+    <ClCompile Include="valve\tier0\memoverride.cpp">
+      <Filter>Thirdparty\valve\tier0</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="safetyhook\safetyhook.hpp">
+      <Filter>Thirdparty\safetyhook</Filter>
+    </ClInclude>
+    <ClInclude Include="safetyhook\Zydis.h">
+      <Filter>Thirdparty\safetyhook</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\minbase\minbase_annotations.h">
+      <Filter>Thirdparty\valve\minbase</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\minbase\minbase_decls.h">
+      <Filter>Thirdparty\valve\minbase</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\minbase\minbase_endian.h">
+      <Filter>Thirdparty\valve\minbase</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\minbase\minbase_identify.h">
+      <Filter>Thirdparty\valve\minbase</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\minbase\minbase_limits.h">
+      <Filter>Thirdparty\valve\minbase</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\minbase\minbase_macros.h">
+      <Filter>Thirdparty\valve\minbase</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\minbase\minbase_securezeromemory_impl.h">
+      <Filter>Thirdparty\valve\minbase</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\minbase\minbase_types.h">
+      <Filter>Thirdparty\valve\minbase</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\minbase\minbase_warnings.h">
+      <Filter>Thirdparty\valve\minbase</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\tier0\basetypes.h">
+      <Filter>Thirdparty\valve\tier0</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\tier0\dbg.h">
+      <Filter>Thirdparty\valve\tier0</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\tier0\memdbgoff.h">
+      <Filter>Thirdparty\valve\tier0</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\tier0\memdbgon.h">
+      <Filter>Thirdparty\valve\tier0</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\tier0\platform.h">
+      <Filter>Thirdparty\valve\tier0</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\tier0\platformtime.h">
+      <Filter>Thirdparty\valve\tier0</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\tier0\platform_sockets.h">
+      <Filter>Thirdparty\valve\tier0</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\tier0\t0constants.h">
+      <Filter>Thirdparty\valve\tier0</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\tier0\valve_off.h">
+      <Filter>Thirdparty\valve\tier0</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\tier0\valve_on.h">
+      <Filter>Thirdparty\valve\tier0</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\tier0\valve_tracelogging.h">
+      <Filter>Thirdparty\valve\tier0</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\tier0\vprof.h">
+      <Filter>Thirdparty\valve\tier0</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\tier0\wchartypes.h">
+      <Filter>Thirdparty\valve\tier0</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\tier1\fmtstr.h">
+      <Filter>Thirdparty\valve\tier1</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\tier1\utlbuffer.h">
+      <Filter>Thirdparty\valve\tier1</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\tier1\utlhashmap.h">
+      <Filter>Thirdparty\valve\tier1</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\tier1\utliterator.h">
+      <Filter>Thirdparty\valve\tier1</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\tier1\utllinkedlist.h">
+      <Filter>Thirdparty\valve\tier1</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\tier1\utlmemory.h">
+      <Filter>Thirdparty\valve\tier1</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\tier1\utlpriorityqueue.h">
+      <Filter>Thirdparty\valve\tier1</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\tier1\utlvector.h">
+      <Filter>Thirdparty\valve\tier1</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\vstdlib\random.h">
+      <Filter>Thirdparty\valve\vstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\vstdlib\strtools.h">
+      <Filter>Thirdparty\valve\vstdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\winlite.h">
+      <Filter>Thirdparty\valve</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\tier1\ipv6text.h">
+      <Filter>Thirdparty\valve\tier1</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\tier0\memalloc.h">
+      <Filter>Thirdparty\valve\tier0</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\tier1\keyvalues.h">
+      <Filter>Thirdparty\valve\tier1</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\tier0\mem.h">
+      <Filter>Thirdparty\valve\tier0</Filter>
+    </ClInclude>
+    <ClInclude Include="valve\tier0\commonmacros.h">
+      <Filter>Thirdparty\valve\tier0</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+  </ItemGroup>
+</Project>
