@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="safetyhook\safetyhook.hpp" />
+    <ClInclude Include="safetyhook\Zydis.h" />
+    <ClInclude Include="valve\minbase\minbase_annotations.h" />
+    <ClInclude Include="valve\minbase\minbase_decls.h" />
+    <ClInclude Include="valve\minbase\minbase_endian.h" />
+    <ClInclude Include="valve\minbase\minbase_identify.h" />
+    <ClInclude Include="valve\minbase\minbase_limits.h" />
+    <ClInclude Include="valve\minbase\minbase_macros.h" />
+    <ClInclude Include="valve\minbase\minbase_securezeromemory_impl.h" />
+    <ClInclude Include="valve\minbase\minbase_types.h" />
+    <ClInclude Include="valve\minbase\minbase_warnings.h" />
+    <ClInclude Include="valve\tier0\basetypes.h" />
+    <ClInclude Include="valve\tier0\commonmacros.h" />
+    <ClInclude Include="valve\tier0\dbg.h" />
+    <ClInclude Include="valve\tier0\mem.h" />
+    <ClInclude Include="valve\tier0\memalloc.h" />
+    <ClInclude Include="valve\tier0\memdbgoff.h" />
+    <ClInclude Include="valve\tier0\memdbgon.h" />
+    <ClInclude Include="valve\tier0\platform.h" />
+    <ClInclude Include="valve\tier0\platformtime.h" />
+    <ClInclude Include="valve\tier0\platform_sockets.h" />
+    <ClInclude Include="valve\tier0\t0constants.h" />
+    <ClInclude Include="valve\tier0\valve_off.h" />
+    <ClInclude Include="valve\tier0\valve_on.h" />
+    <ClInclude Include="valve\tier0\valve_tracelogging.h" />
+    <ClInclude Include="valve\tier0\vprof.h" />
+    <ClInclude Include="valve\tier0\wchartypes.h" />
+    <ClInclude Include="valve\tier1\fmtstr.h" />
+    <ClInclude Include="valve\tier1\ipv6text.h" />
+    <ClInclude Include="valve\tier1\keyvalues.h" />
+    <ClInclude Include="valve\tier1\utlbuffer.h" />
+    <ClInclude Include="valve\tier1\utlhashmap.h" />
+    <ClInclude Include="valve\tier1\utliterator.h" />
+    <ClInclude Include="valve\tier1\utllinkedlist.h" />
+    <ClInclude Include="valve\tier1\utlmemory.h" />
+    <ClInclude Include="valve\tier1\utlpriorityqueue.h" />
+    <ClInclude Include="valve\tier1\utlvector.h" />
+    <ClInclude Include="valve\vstdlib\random.h" />
+    <ClInclude Include="valve\vstdlib\strtools.h" />
+    <ClInclude Include="valve\winlite.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="hooks.cpp" />
+    <ClCompile Include="safetyhook\safetyhook.cpp" />
+    <ClCompile Include="safetyhook\Zydis.c" />
+    <ClCompile Include="valve\tier0\dbg.cpp" />
+    <ClCompile Include="valve\tier0\memoverride.cpp" />
+    <ClCompile Include="valve\tier0\platformtime.cpp" />
+    <ClCompile Include="valve\tier0\valve_tracelogging.cpp" />
+    <ClCompile Include="valve\tier1\ipv6text.c" />
+    <ClCompile Include="valve\tier1\keyvalues.cpp" />
+    <ClCompile Include="valve\tier1\utlbuffer.cpp" />
+    <ClCompile Include="valve\vstdlib\strtools.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{dbc58633-1aec-4ec0-ad63-dd86cde6a587}</ProjectGuid>
+    <RootNamespace>VBSPP3</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>valve;safetyhook;$(IncludePath)</IncludePath>
+    <PreBuildEventUseInBuild>false</PreBuildEventUseInBuild>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+    <PreLinkEventUseInBuild>false</PreLinkEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>valve;safetyhook;$(IncludePath)</IncludePath>
+    <PreBuildEventUseInBuild>false</PreBuildEventUseInBuild>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+    <PreLinkEventUseInBuild>false</PreLinkEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>valve;safetyhook;$(IncludePath)</IncludePath>
+    <PreBuildEventUseInBuild>false</PreBuildEventUseInBuild>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+    <PreLinkEventUseInBuild>false</PreLinkEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>valve;safetyhook;$(IncludePath)</IncludePath>
+    <PreBuildEventUseInBuild>false</PreBuildEventUseInBuild>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+    <PreLinkEventUseInBuild>false</PreLinkEventUseInBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;VBSPP3_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp23</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+    </Link>
+    <MASM>
+      <PreserveIdentifierCase>3</PreserveIdentifierCase>
+    </MASM>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;VBSPP3_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp23</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+    </Link>
+    <MASM>
+      <PreserveIdentifierCase>3</PreserveIdentifierCase>
+    </MASM>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;VBSPP3_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;VBSPP3_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Platform)'=='x64'">
+    <CustomBuildStep>
+      <Command>
+      </Command>
+      <Outputs>
+      </Outputs>
+      <Inputs>
+      </Inputs>
+    </CustomBuildStep>
+    <Link>
+      <ModuleDefinitionFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </ModuleDefinitionFile>
+    </Link>
+    <Link>
+      <ModuleDefinitionFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </ModuleDefinitionFile>
+    </Link>
+    <PreBuildEvent>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+    </PreBuildEvent>
+    <MASM>
+      <PreserveIdentifierCase Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">3</PreserveIdentifierCase>
+    </MASM>
+    <MASM>
+      <PreserveIdentifierCase Condition="'$(Configuration)|$(Platform)'=='Release|x64'">3</PreserveIdentifierCase>
+    </MASM>
+    <ClCompile>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpp23</LanguageStandard>
+    </ClCompile>
+    <ClCompile>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpp23</LanguageStandard>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>
