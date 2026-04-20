@@ -1,4 +1,4 @@
-# VBSP++P3 (Unfinished)
+# VBSP++P3 (Scrapped)
 >DLL based patch for VBSP++ that added support for Postal 3 specific features from P3's VBSP.
 
 >*This code was uploaded for archival purposes.*
@@ -14,6 +14,13 @@
 #### Included features:
 - [x] Added code that adds compound props (`p3_prop_compound`) to the static prop list (from testing it does not does alter anything visually or gameplay-wise, could be a leftover feature).
 - [x] Added code for trees (`p3_prop_tree`). It creates a game lump with tree data to be used within Postal 3 code at runtime to render leaves.
+
+------------
+
+#### To use:
+As the project was scrapped, the only way to use this patch is to use something like **CFF Explorer** to add imports to the `vbspplusplus.exe` from `VBSP++P3.dll`.
+When any import gets added from a library, the executable automatically loads the library. 
+>It was first planned to use DLL hijacking thru Windows API DLLs, but the idea was scrapped to due to the possibility of accidentally injecting the `VBSP++P3.dll` into a game like *Team Fortress 2* (while the hijack DLL could also get flagged by V.A.C) when booting them up (which would cause a crash) if you had the hijack DLL located in the `/bin/` folder. If the project was successful (in a way where the models worked properly with VBSP++) then I would've developed a standalone launcher for **VBSP++** where you open the launcher to automatically open up **VBSP++** and inject the `VBSP++P3.dll`.
 
 ------------
 
